@@ -70,9 +70,9 @@ body {
 }
 
 .linea-division {
-     width: 80%;
+     width: 100%;
      height: 2px;
-     background-color: black;
+     background-color: white;
 }
 
 /*carousel*/
@@ -105,4 +105,9 @@ body {
     transform: rotate(45deg);
     margin: 0 15px;
     background-color: black;
+}
+
+.carousel-fondo {
+    background: rgba(0, 0, 0, 0.5);
+
 }
