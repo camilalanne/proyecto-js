@@ -93,6 +93,14 @@ const discos = [
 
 let carrito = [];
 
+
+const guardarLocal = (clave, valor) => {
+    localStorage.setItem(clave, valor)
+};
+for (const disco of discos){
+    guardarLocal(disco.id, JSON.stringify(disco));
+}
+
 //Declarar funcion
 
 function mostrarMenuDeCompra(){
