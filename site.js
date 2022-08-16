@@ -136,12 +136,10 @@ function mostrarMenuDeCompra(){
 // mostrarMenuDeCompra();
 
 function calcularPrecio(precioProducto, pagaEnEfectivo){
-    let precioFinal=precioProducto;
-    if (pagaEnEfectivo) { 
-        precioFinal=precioFinal * 0.9; 
-    }
+    let precioFinal=pagaEnEfectivo ? precioProducto * 0.9 : precioProducto;
     alert("En efectivo $" +precioFinal);
 }
+
 
 let pagaEnEfectivo = prompt("pagas en efectivo?").toLowerCase() == "Si"; 
 calcularPrecio(obtenerPrecioTotal(), pagaEnEfectivo);
