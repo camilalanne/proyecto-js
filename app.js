@@ -13,7 +13,18 @@ document.addEventListener("DOMContentLoaded", () =>{
      cards.addEventListener("click", e =>{
         addCarrito(e)
     })
+
+    if(localStorage.getItem("carrito")){
+        carrito = JSON.parse(localStorage.getItem("carrito"))
+        pintarCarrito()
+    }
+    items.addEventListener("click", e =>{
+    btnAccion(e) 
 })
+})
+
+
+
 
 const fetchData = async() => {
     try{
@@ -77,7 +88,11 @@ const pintarCarrito = () =>{
     })
     items.appendChild(fragment)
     pintarFooter()
+
+    localStorage.setItem("carrito", JSON.stringify(carrito))
 }
+
+//nuevo 
 
 const pintarFooter = () =>{
     footer.innerHTML = ""
@@ -85,9 +100,40 @@ const pintarFooter = () =>{
         footer.innerHTML = `
         <th scope="row" colspan="5">carrito vacio - comienze a comprar!</th>
         `
+    }else {
+         const nCantidad = Object.values(carrito).reduce((acc,{cantidad}) => acc + cantidad,0)
+    const nPrecio = Object.values(carrito).reduce((acc,{cantidad,precio}) => acc + cantidad * precio,0)
+    templateFooter.querySelectorAll("td")[0].textContent = nCantidad
+    templateFooter.querySelector("span").textContent = nPrecio
+    
+    const clone =templateFooter.cloneNode(true)
+    fragment.appendChild(clone) 
+    footer.appendChild(fragment)
+
+    const btnVaciar = document.getElementById("vaciar-carrito")
+    btnVaciar.addEventListener("click", () =>{
+        carrito = {} 
+        pintarCarrito()
+    })
     }
+       
+}
 
-
+const btnAccion = e =>{
+    if(e.target.classList.contains("btn-info")){
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad++ 
+        carrito[e.target.dataset.id] = {...producto}   
+    }   
+    if(e.target.classList.contains("btn-danger")){
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad--
+        if(producto.cantidad ===0){
+            delete carrito[e.target.data.id]
+        }    
+    } 
+    pintarCarrito()
+    e.stopPropagation()
 }
 
 

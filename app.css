@@ -1,3 +1,14 @@
 body {
+    height: 100vh;
     background: -webkit-linear-gradient(90deg, grey, white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:'Anton', sans-serif;
+    ;
+}
+
+.carrito{
+    text-align: center;
+
 }
