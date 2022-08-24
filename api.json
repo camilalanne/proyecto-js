@@ -1,0 +1,38 @@
+[
+    {
+      "precio": 1500,
+      "id": 1,
+      "title": " Yellow Submarine",
+      "thumbnailUrl": "imagenes/7.jpg"
+    },
+    {
+      "precio": 2300,
+      "id": 2,
+      "title": "Help!",
+      "thumbnailUrl": "imagenes/8.jpg"
+    },
+    {
+      "precio": 2100,
+      "id": 3,
+      "title": "Revolver",
+      "thumbnailUrl": "imagenes/9.webp"
+    },
+    {
+      "precio": 3350,
+      "id": 4,
+      "title": "get back (rooftop performance)",
+      "thumbnailUrl": "imagenes/10.jpg"
+    },
+    {
+      "precio": 2310,
+      "id": 5,
+      "title": "the black album",
+      "thumbnailUrl": "imagenes/11.jpg"
+    },
+    {
+      "precio": 2150,
+      "id": 6,
+      "title": "Twist and Shout",
+      "thumbnailUrl": "imagenes/12.webp"
+    }
+  ]
