@@ -83,7 +83,13 @@ body {
     font-family:'Anton', sans-serif;
     margin-top: 0;
 }
+html {
+    min-height:100%;
+}
 
+body {
+    height:100%;
+}
 .tipo-black{
     color: black;
     margin: 7px 0;

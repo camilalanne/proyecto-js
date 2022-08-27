@@ -12,3 +12,23 @@ body {
     text-align: center;
 
 }
+
+html {
+    min-height:100%;
+}
+
+body {
+    height:100%;
+}
+.links {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+ }
+ .links:hover {
+    background-color:gray ;
+ }
+

@@ -16,7 +16,13 @@ body {
     background-size: cover;
     
 }
+html {
+    min-height:100%;
+}
 
+body {
+    height:100%;
+}
 .container-form {
     width: 90%;
     height: 90vh;
@@ -144,3 +150,18 @@ body {
     opacity: 0;
     visibility: hidden;
 }
+
+.links {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+ }
+ .links:hover {
+    background-color:gray ;
+ }
+ .links{
+    background-color:   #D3D3D3   ;
+ }
